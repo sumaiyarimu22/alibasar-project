@@ -14,11 +14,15 @@
 .table-colum:hover .popup {
   @apply absolute w-[15rem] h-[10rem] left-40 top-2 bg-[#303030] text-white rounded-md duration-500 opacity-100 block;
 }
-.tooltip-text {
+.tooltip-text,
+.tooltip-text1,
+.tooltip-text2 {
   display: none;
   opacity: 0;
 }
-.tooltip:hover .tooltip-text {
+.tooltip:hover .tooltip-text,
+.tooltip:hover .tooltip-text1,
+.tooltip:hover .tooltip-text2 {
   width: 20rem;
   background: #fff2d8;
   padding: 0.8rem;
@@ -39,5 +43,26 @@
   background-color: #fff2d8;
   top: -8px;
   left: 10%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.tooltip .tooltip-text1::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: #fff2d8;
+  top: -8px;
+  left: 30%;
+
+  transform: translateX(-50%) rotate(45deg);
+}
+.tooltip .tooltip-text2::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background-color: #fff2d8;
+  top: -8px;
+  left: 55%;
   transform: translateX(-50%) rotate(45deg);
 }

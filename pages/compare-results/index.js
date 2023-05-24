@@ -106,17 +106,17 @@ const CompareResultPage = () => {
         {/* bottom part */}
 
         <div className="absolute bottom-0 px-10 flex flex-col gap-24">
-          <div className="flex gap-1 text-[0.75rem] ">
+          <div className="flex gap-1 text-[0.75rem] relative">
             <div className="tooltip relative">
               <p className="hover:bg-[#dddddd]/80 duration-300 px-2 py-1 rounded-md inline-block">
                 Low/High
               </p>
             </div>
-            <div className="tooltip relative">
+            <div className="tooltip">
               <p className="hover:bg-[#dddddd]/80 duration-300 px-2 py-1 rounded-md inline-block">
                 High/Low
               </p>
-              <span className="tooltip-text">
+              <span className="tooltip-text1">
                 If you pick "High/Low", we'll rank the suppliers with the lowest
                 values.For example “ The suppliers with the most quantity in
                 each row”
@@ -131,7 +131,7 @@ const CompareResultPage = () => {
 
           {/* last */}
 
-          <div className="flex gap-1 text-[0.75rem] pb-24">
+          <div className="flex gap-1 text-[0.75rem] pb-24  relative">
             <div className="tooltip relative">
               <p className="hover:bg-[#dddddd]/80 duration-300 px-2 py-1 rounded-md inline-block">
                 Low/High
@@ -142,11 +142,11 @@ const CompareResultPage = () => {
                 High/Low
               </p>
             </div>
-            <div className="tooltip relative">
+            <div className="tooltip">
               <p className="hover:bg-[#dddddd]/80 duration-300 px-2 py-1 rounded-md inline-block">
                 Unfilled Row(s)
               </p>
-              <span className="tooltip-text">
+              <span className="tooltip-text2">
                 If you pick "High/Low", we'll rank the suppliers with the lowest
                 values.For example “ The suppliers with the most quantity in
                 each row”
