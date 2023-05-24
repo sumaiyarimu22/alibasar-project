@@ -6,6 +6,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { FaTimes } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
+import Link from "next/link";
 
 const Dashboard = () => {
   const [open, setOpen] = useState(false);
@@ -54,11 +55,19 @@ const Dashboard = () => {
 
       {/* right side */}
 
-      <div className="lg:col-span-8 xl:col-span-5 relative col-span-10">
+      <div
+        className={
+          open
+            ? "lg:col-span-10 xl:col-span-6 relative col-span-10"
+            : "lg:col-span-8 xl:col-span-5 relative col-span-10"
+        }
+      >
         <div className="text-[#929292] flex justify-between py-2 border-b">
-          <span onClick={handleMenu} className="lg:hidden block text-xl z-50">
-            {open == true ? <FaTimes /> : <FaBars />}
-          </span>
+          <div>
+            <span onClick={handleMenu} className="lg:hidden block text-xl z-50">
+              {open == true ? <FaTimes /> : <FaBars />}
+            </span>
+          </div>
           <p>My list</p>
           <p className="flex gap-2 px-10 justify-center items-center text-xl">
             <BiSearchAlt2 />
@@ -113,9 +122,12 @@ const Dashboard = () => {
                   • Share this page with your suppliers
                 </p>
               </div>
-              <p className="px-4 hover:bg-[#A3A2A2]/20 duration-300 text-[0.70rem] py-1 border-b border-[#A3A2A2]/20">
+              <Link
+                href="/compare-results"
+                className="px-4 hover:bg-[#A3A2A2]/20 duration-300 text-[0.70rem] py-1 border-b border-[#A3A2A2]/20 block"
+              >
                 Compare Results
-              </p>
+              </Link>
               <p className="px-4 hover:bg-[#A3A2A2]/20 duration-300 text-[0.70rem]">
                 Close List
               </p>
